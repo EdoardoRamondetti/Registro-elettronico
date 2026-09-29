@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc,#00C9A7,#0A1D36);
+    animation: gradientBg 20s ease infinite;
+    background-size: 400% 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+.login-card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 1s ease-out;
+    background-color: rgba(255, 255, 255,0.95);
+}
+.login-card h2 {
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.login-card .form-label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: .5rem;
+}
+.login-card .form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.login-card .form-control:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
+    outline: none;
+}
+.login-card .btn-primary {
+    background-color: #6a11cb;
+    border-color: #6a11cb;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+.login-card .btn-primary:hover {
+    background-color: #540ea0;
+    border-color: #540ea0;
+    transform: translateY(-2px);
+}
+
+.nonValid{
+    border-color: red !important;
+}
+
+.red-text{
+    color: red;
+}
+
+#loadingSpinner{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: scale(1.8);
+}
+
+/* Animazioni CSS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientBg{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}

@@ -1,0 +1,74 @@
+.planningContainer {
+  animation: fadeIn 1s ease-out;
+  margin-top: 60px;
+}
+
+.planningContainer .header {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0 1rem;
+  color: white;
+  text-align: center;
+}
+
+.calendar-section-planning{
+  text-align:center;
+    margin-top:20px;
+}
+
+.table-responsive-custom {
+  max-width: 1400px;
+  margin: 20px auto 0;
+  overflow-x: auto;
+  padding: 0 1rem;
+}
+
+table#planningTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table#planningTable th,
+table#planningTable td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+table#planningTable th {
+  background: rgba(106, 17, 203, 0.7);
+  color: #f0eaff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+table#planningTable tbody tr:hover {
+  background: rgba(149, 125, 255, 0.3);
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  table#planningTable th,
+  table#planningTable td {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+  
+  .planningContainer .header {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .table-responsive-custom {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+}

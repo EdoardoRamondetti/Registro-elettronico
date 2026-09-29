@@ -1,0 +1,164 @@
+.assenzeContainer {
+  animation: fadeIn 1s ease-out;
+  margin-top: 60px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom:10px;
+}
+
+.filter-calendar-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Filter Section */
+.filter-section-assenze {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+}
+
+.filter-btn {
+      padding: 0.7rem 1.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+}
+
+.calendar-section label{
+  color:white;
+  margin-right:10px;
+}
+
+input[type="date"]{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.table-responsive-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding: 0 !important;
+}
+
+#assenzeTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin-bottom: 0;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.btnAssenzaGiustificata,.btnAssenzaNonGiustificata{
+  color:white;
+  border:none;
+  border-radius:20px;
+  height:40px;
+  width:200px;
+}
+
+.btnAssenzaGiustificata{
+  background: #3F5EFB;
+  cursor:default !important;
+}
+
+.btnAssenzaNonGiustificata{
+  background: red;
+  animation:moveFromUpToDown 3s infinite;
+}
+
+.no-assenze-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.no-assenze-message .icon {
+  margin-right: 8px;
+}
+
+@keyframes moveFromUpToDown {
+  0% {
+    
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100%{
+    
+  }
+}
+
+
+@media (max-width: 600px) {
+  .table-responsive-custom {
+    overflow-x: visible;
+  }
+
+  #assenzeTable {
+    font-size: 0.9rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
